@@ -15,28 +15,6 @@ args = ["pnpm", "store", "prune"]
 env = { "CI" = "true" }
 
 [workflows]
-runButton = "Project"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Rammerhead"
-
-[[workflows.workflow]]
-name = "Rammerhead"
-author = "agent"
-
-[workflows.workflow.metadata]
-outputType = "webview"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd rammerhead && node src/server.js"
-waitForPort = 8099
 
 [agent]
 stack = "PNPM_WORKSPACE"

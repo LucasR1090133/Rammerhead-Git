@@ -1,0 +1,21 @@
+kind = "web"
+previewPath = "/"
+title = "Rammerhead Proxy"
+version = "1.0.0"
+id = "artifacts/rammerhead-proxy"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25233
+
+[services.development]
+run = "node /home/runner/workspace/rammerhead/src/server.js"
+
+[services.env]
+PORT = "25233"
